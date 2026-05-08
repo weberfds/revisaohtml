@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #1e1b4b;
+    --accent-color: #4f46e5;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+aside {
+    width: 260px;
+    height: 100vh;
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 24px;
+    position: sticky;
+    top: 0;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+nav a.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--secondary-color);
+}
+
+.search-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.search-bar button {
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    padding: 0 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.search-bar button:hover {
+    background: var(--accent-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+tbody tr:hover {
+    background: #fcfcfd;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td button {
+    border: none;
+    background: #f1f5f9;
+    color: var(--text-muted);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+td button:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
